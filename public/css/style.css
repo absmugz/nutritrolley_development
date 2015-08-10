@@ -1,0 +1,1739 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 13 Apr 2015, 9:43:59 AM
+    Author     : umugwab
+*/
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot?-rbdlin');
+	src:url('fonts/icomoon.eot?#iefix-rbdlin') format('embedded-opentype'),
+		url('fonts/icomoon.woff?-rbdlin') format('woff'),
+		url('fonts/icomoon.ttf?-rbdlin') format('truetype'),
+		url('fonts/icomoon.svg?-rbdlin#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+.icon-home:before {
+    content: "\e607";
+}
+
+.icon-recipe-finder:before {
+    content: "\e600";
+}
+
+.icon-natural-healing:before {
+    content: "\e602";
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+div.container form.form-signin div.checkbox a.pull-right.need-help {
+color: #337ab7;
+ }
+
+
+/*  bhoechie tab */
+div.bhoechie-tab-container{
+  z-index: 10;
+  background-color: #d8e1eb;
+  padding: 0 !important;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  border:1px solid #ddd;
+  margin-top: 10px;
+  background-clip: padding-box;
+  opacity: 0.97;
+  filter: alpha(opacity=97);
+}
+div.bhoechie-tab-menu{
+  padding-right: 0;
+  padding-left: 0;
+  padding-bottom: 0;
+}
+div.bhoechie-tab-menu div.list-group{
+  margin-bottom: 0;
+}
+div.bhoechie-tab-menu div.list-group>a{
+  margin-bottom: 0;
+}
+div.bhoechie-tab-menu div.list-group>a .glyphicon,
+div.bhoechie-tab-menu div.list-group>a .fa {
+  color: #5A55A3;
+}
+div.bhoechie-tab-menu div.list-group>a:first-child{
+  border-top-right-radius: 0;
+  -moz-border-top-right-radius: 0;
+}
+div.bhoechie-tab-menu div.list-group>a:last-child{
+  border-bottom-right-radius: 0;
+  -moz-border-bottom-right-radius: 0;
+}
+div.bhoechie-tab-menu div.list-group>a.active,
+div.bhoechie-tab-menu div.list-group>a.active .glyphicon,
+div.bhoechie-tab-menu div.list-group>a.active .fa{
+   /* background-color: #5A55A3;
+  background-image: #5A55A3;*/
+  
+  /* Note: This gradient may render differently in browsers that don't support the unprefixed gradient syntax */
+
+/* IE10 Consumer Preview */ 
+background-image: -ms-linear-gradient(top left, #666666 0%, #000000 100%);
+
+/* Mozilla Firefox */ 
+background-image: -moz-linear-gradient(top left, #666666 0%, #000000 100%);
+
+/* Opera */ 
+background-image: -o-linear-gradient(top left, #666666 0%, #000000 100%);
+
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, #666666), color-stop(1, #000000));
+
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-linear-gradient(top left, #666666 0%, #000000 100%);
+
+/* W3C Markup, IE10 Release Preview */ 
+background-image: linear-gradient(to bottom right, #666666 0%, #000000 100%);
+  color: #ffffff;
+}
+/*
+div.bhoechie-tab-menu div.list-group>a.active:after{
+  content: '';
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  margin-top: -13px;
+  border-left: 0;
+  border-bottom: 13px solid transparent;
+  border-top: 13px solid transparent;
+  border-left: 10px solid #5A55A3;
+}*/ 
+
+div.bhoechie-tab-menu div.list-group>a.active:after {
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid #d8e1eb;
+    border-top: 20px solid transparent;
+    content: "";
+    left: 84%;
+    margin-top: -19px;
+    position: absolute;
+    top: 50%;
+}
+
+
+div.bhoechie-tab-content{
+  background-color: #d8e1eb;
+  /* border: 1px solid #eeeeee; */
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+div.bhoechie-tab div.bhoechie-tab-content:not(.active){
+  display: none;
+}
+
+.row-no-margin {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+.buttonPopup
+{
+	float: left;
+	width: 150px;
+	height: 59px;
+	display: block;
+	margin-left: 10px;
+}
+.button_gray
+{
+	background-image: url("../img/live_preview_img/aspp_button_gray.png");
+}
+.button_green
+{
+	background-image: url("../img/live_preview_img/aspp_button_green.png");
+}
+.button_blue
+{
+	background-image: url("../img/live_preview_img/aspp_button_blue.png");
+}
+.button_maroon
+{
+	background-image: url("../img/live_preview_img/aspp_button_maroon.png");
+}
+.button_orange
+{
+	background-image: url("../img/live_preview_img/aspp_button_orange.png");
+}
+.dspp_popup
+{
+	width: 788px;
+	position: absolute;
+	display: none;
+}
+.dspp_overlay
+{
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	background-color: #000000;
+	z-index: 100;
+}
+.dspp_content .title
+{
+	margin-top: 10px; 
+	margin-bottom: 20px; 
+	font-size: 24px;
+	color: #444444;
+}
+.alert
+{
+	clear: both;
+	border: 1px solid #c83348;
+	background-color: #ec7f7f;
+	-moz-border-radius: 10px;
+	-moz-box-shadow: 3px 3px 20px #ec7f7f;
+	-webkit-border-radius: 10px;
+	-webkit-box-shadow: 3px 3px 20px #ec7f7f;
+	border-radius: 10px;
+	box-shadow: 3px 3px 20px #ec7f7f;
+	padding: 10px;
+	margin-bottom: 15px;
+	font-size: 12px;
+	text-align: center;
+	line-height: 150%;
+}
+.message
+{
+	clear: both;
+	border: 1px solid #c8c8c8;
+	background-color: #e2e2e2;
+	-moz-border-radius: 10px;
+	-moz-box-shadow: 3px 3px 20px #e2e2e2;
+	-webkit-border-radius: 10px;
+	-webkit-box-shadow: 3px 3px 20px #e2e2e2;
+	border-radius: 10px;
+	box-shadow: 3px 3px 20px #e2e2e2;
+	padding: 10px;
+	margin-bottom: 15px;
+	font-size: 12px;
+	text-align: center;
+	line-height: 150%;
+}
+/* === step process panel === */
+.dspp_panel
+{
+	background-color: #ffffff;
+	border: 1px solid #dbe6ee;
+	padding: 10px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+/* === steps === */
+.dspp_step
+{
+	float: left;
+	position: relative;
+	margin-left: -20px;
+	width: 351px;
+	height: 43px;
+	font-size: 16px;
+	padding-left: 20px;
+	padding-top: 18px;
+	background-image: url("../img/sprite_with_icons.png");
+       background-repeat: no-repeat;
+	outline: none;
+}
+.dspp_step1, .dspp_step2, .dspp_step3
+{
+	width: 237px;
+}
+.p2Step1, .p2Step2, .p2Step3, .p2Step4
+{
+	width: 173px;
+}
+.p3Step1, .p3Step2, .p3Step3, .p3Step4
+{
+	width: 173px;
+}
+.p4Step1
+{
+	width: 202px;
+}
+.p4Step2
+{
+	width: 160px;
+}
+.p4Step3
+{
+	width: 135px;
+}
+.p4Step4
+{
+	width: 100px;
+}
+.p4Step5
+{
+	width: 85px;
+}
+.p5Step1, .p5Step2, .p5Step3
+{
+	width: 240px;
+}
+.p6Step1, .p6Step2, .p6Step3, .p6Step4
+{
+	width: 175px;
+}
+.p7Step1, .p7Step2
+{
+	width: 371px;
+}
+.p8Step1, .p8Step2, .p8Step3
+{
+	width: 240px;
+}
+/* === steps labels === */
+.dspp_stepLabel
+{
+	position: absolute;
+	top: 19px;
+	right: 30px;
+}
+.dspp_stepLabelLast
+{
+	position: absolute;
+	top: 19px;
+	right: 25px;
+}
+/* === contents === */
+.dspp_content
+{
+	clear: both;
+	padding: 10px;
+	line-height: 150%;
+}
+/* === nextPrevButtons === */
+.dspp_nextPrevButtons
+{
+	clear: both;
+	width: 310px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.dspp_nextPrevButtons .dspp_button:first-child
+{
+	margin-right: 10px;
+}
+.dspp_nextPrevButtons .dspp_button
+{
+	float: left;
+	display: block;
+	width: 150px;
+	height: 34px;
+	padding-top: 12px;
+	text-align: center;
+	background-image: url("../img/sprite_buttons.png");
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+.dspp_nextPrevButtons .dspp_inactiveButton
+{
+	background-position: -10px -310px;
+	color: #ffffff;
+}
+/* === boxStart === */
+.dspp_boxStart
+{
+	float: left;
+	width: 6px;
+	height: 60px;
+	background: url("../img/sprite_with_icons.png") no-repeat;
+}
+
+div.bhoechie-tab-menu div.list-group > a {
+    border-top-right-radius: 0;
+    height: 100px !important;
+}
+
+
+.list-group-item {
+    /* IE10 Consumer Preview */ 
+background-image: -ms-linear-gradient(left, #7D7D7D 0%, #000000 300%);
+
+/* Mozilla Firefox */ 
+background-image: -moz-linear-gradient(left, #7D7D7D 0%, #000000 300%);
+
+/* Opera */ 
+background-image: -o-linear-gradient(left, #7D7D7D 0%, #000000 300%);
+
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #7D7D7D), color-stop(3, #000000));
+
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-linear-gradient(left, #7D7D7D 0%, #000000 300%);
+
+/* W3C Markup, IE10 Release Preview */ 
+background-image: linear-gradient(to right, #7D7D7D 0%, #000000 300%);
+    border: 1px solid #ddd;
+    display: block;
+    margin-bottom: -1px;
+    padding: 10px 15px;
+    position: relative;
+}
+
+a, a:visited, a:active {
+    color: #fff;
+    outline: medium none;
+    text-decoration: none;
+}
+
+.natural_healing {
+    background-color: #bdcd00;
+    color: #fff;
+    border: 5px solid #fff;
+    border-radius: 4px;
+}
+
+.all_recipes {
+    background-color: #a1b6cb;
+    border: 2px solid #787c80;
+    border-radius: 3px;
+    color: #fff;
+    margin-top: 15px;
+}
+
+.all_recipes_categories {
+    background-color: #fff;
+    margin-left: -15px;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    width: 103.9%;
+}
+
+.btn-natural_healing {
+    background-color: #bdcd00;
+    border-color: #fff;
+    color: #fff;
+}
+
+.meal_planner {
+    background-color: #e75094;
+    color: #fff;
+    border: 5px solid #fff;
+    border-radius: 4px;
+}
+
+.btn-meal_planner {
+    background-color: #e75094;
+    border-color: #fff;
+    color: #fff;
+}
+
+.shopping_list {
+    background-color: #9085ba;
+    color: #fff;
+    border: 5px solid #fff;
+    border-radius: 4px;
+}
+
+.btn-shopping_list {
+    background-color: #9085ba;
+    border-color: #fff;
+    color: #fff;
+}
+
+.guess_right {
+    background-color: #12bea2;
+    color: #fff;
+    border: 5px solid #fff;
+    border-radius: 4px;
+}
+
+.btn-guess_right {
+    background-color: #12bea2;
+    border-color: #fff;
+    color: #fff;
+}
+
+.blog {
+    background-color: #ffed00;
+    color: #fff;
+    border: 5px solid #fff;
+    border-radius: 4px;
+}
+
+.btn-blog {
+    background-color: #ffed00;
+    border-color: #fff;
+    color: #fff;
+}
+
+.sectionheading {
+    color: #fff;
+    font-weight:700;
+}
+
+.row-no-margin {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+.alert-me {
+    height: 100px;
+    padding-top: 35px;
+    background-color: #656562;
+}
+
+.logosection {
+    margin-top: 10px;
+    
+}
+
+ /* jssor slider bullet navigator skin 05 css */
+            /*
+            .jssorb05 div           (normal)
+            .jssorb05 div:hover     (normal mouseover)
+            .jssorb05 .av           (active)
+            .jssorb05 .av:hover     (active mouseover)
+            .jssorb05 .dn           (mousedown)
+            */
+            .jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
+                background: url(../../public/img/b05.png) no-repeat;
+                overflow: hidden;
+                cursor: pointer;
+            }
+
+            .jssorb05 div {
+                background-position: -7px -7px;
+            }
+
+                .jssorb05 div:hover, .jssorb05 .av:hover {
+                    background-position: -37px -7px;
+                }
+
+            .jssorb05 .av {
+                background-position: -67px -7px;
+            }
+
+            .jssorb05 .dn, .jssorb05 .dn:hover {
+                background-position: -97px -7px;
+            }
+            
+             /* jssor slider arrow navigator skin 12 css */
+            /*
+            .jssora12l              (normal)
+            .jssora12r              (normal)
+            .jssora12l:hover        (normal mouseover)
+            .jssora12r:hover        (normal mouseover)
+            .jssora12ldn            (mousedown)
+            .jssora12rdn            (mousedown)
+            */
+            .jssora12l, .jssora12r, .jssora12ldn, .jssora12rdn {
+                position: absolute;
+                cursor: pointer;
+                display: block;
+                background: url(../../public/img/a12.png) no-repeat;
+                overflow: hidden;
+            }
+
+            .jssora12l {
+                background-position: -16px -37px;
+            }
+
+            .jssora12r {
+                background-position: -75px -37px;
+            }
+
+            .jssora12l:hover {
+                background-position: -136px -37px;
+            }
+
+            .jssora12r:hover {
+                background-position: -195px -37px;
+            }
+
+            .jssora12ldn {
+                background-position: -256px -37px;
+            }
+
+            .jssora12rdn {
+                background-position: -315px -37px;
+            }
+
+
+
+
+
+/* Carousel Styles */
+.carousel-indicators .active {
+    background-color: #2980b9;
+}
+
+.carousel-inner img {
+    width: 100%;
+    max-height: 460px
+}
+
+.carousel-control {
+    width: 0;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+	opacity: 1;
+	filter: alpha(opacity=100);
+	background-image: none;
+	background-repeat: no-repeat;
+	text-shadow: none;
+}
+
+.carousel-control.left span {
+	padding: 15px;
+}
+
+.carousel-control.right span {
+	padding: 15px;
+}
+
+.carousel-control .glyphicon-chevron-left, 
+.carousel-control .glyphicon-chevron-right, 
+.carousel-control .icon-prev, 
+.carousel-control .icon-next {
+	position: absolute;
+	top: 45%;
+	z-index: 5;
+	display: inline-block;
+}
+
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .icon-prev {
+	left: 0;
+}
+
+.carousel-control .glyphicon-chevron-right,
+.carousel-control .icon-next {
+	right: 0;
+}
+
+.carousel-control.left span,
+.carousel-control.right span {
+	background-color: #000;
+}
+
+.carousel-control.left span:hover,
+.carousel-control.right span:hover {
+	opacity: .7;
+	filter: alpha(opacity=70);
+}
+
+/* Carousel Header Styles */
+.header-text {
+    position: absolute;
+    top: 20%;
+    left: 1.8%;
+    right: auto;
+    width: 96.66666666666666%;
+    color: #fff;
+}
+
+.header-text h2 {
+    font-size: 40px;
+}
+
+.header-text h2 span {
+    background-color: #2980b9;
+	padding: 10px;
+}
+
+.header-text h3 span {
+	background-color: #000;
+	padding: 15px;
+}
+
+.btn-min-block {
+    min-width: 170px;
+    line-height: 26px;
+}
+
+.btn-theme {
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid #fff;
+    margin-right: 15px;
+}
+
+.btn-theme:hover {
+    color: #000;
+    background-color: #fff;
+    border-color: #fff;
+}
+
+
+/* 
+Forms for membership
+*/
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.sign_up_container {
+	border: 1px solid #C0C0C0;
+	border-radius:5px;
+	}
+/*# sourceMappingURL=bootstrap-theme.css.map */
+/** The Magic **/
+
+
+.breadcrumb {
+	/*centering*/
+	display: inline-block;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.35);
+	overflow: hidden;
+	/* border-radius: 5px;*/
+	/*Lets add the numbers for each link using CSS counters. flag is the name of the counter. to be defined using counter-reset in the parent element of the links*/
+	counter-reset: flag;
+	/*text-align:center;*/
+	
+	   background-color:none !important;
+    border-radius:0px !important;
+    list-style:nonne none none !important;
+    margin-bottom:0px !important;
+    padding:0px !important;
+	 width: 100%;
+}
+
+.breadcrumb a#start_eating_healthily {
+	background: #d3d726;
+	background: linear-gradient(#d3d726, #a4af29);
+}
+
+.breadcrumb a {
+	text-decoration: none;
+	outline: none;
+	display: block;
+	float: left;
+	font-size: 12px;
+	line-height: 18px;
+	color: white;
+	/*need more margin on the left of links to accomodate the numbers*/
+	padding: 12px 10px 0 62px;
+	background: #d5d5d5;
+	background: linear-gradient(#d5d5d5, #b4b4b4);
+	position: relative;
+	width:20%;
+        font-weight: 700;
+        height: 60px;
+	
+}
+/*since the first link does not have a triangle before it we can reduce the left padding to make it look consistent with other links*/
+.breadcrumb a:first-child {
+	padding-left: 46px;
+	/*border-radius: 5px 0 0 5px; to match with the parent's radius*/
+}
+.breadcrumb a:first-child:before {
+	left: 14px;
+}
+.breadcrumb a:last-child {
+	/*border-radius: 0 5px 5px 0; this was to prevent glitches on hover*/
+	padding-right: 20px;
+}
+
+/*hover/active styles*/
+.breadcrumb a.active, .breadcrumb a:hover{
+	background: #333;
+	background: linear-gradient(#009de0, #0077b4);
+}
+.breadcrumb a.active:after, .breadcrumb a:hover:after {
+	background: #333;
+	background: linear-gradient(135deg, #009de0, #0077b4);
+}
+
+/*adding the arrows for the breadcrumbs using rotated pseudo elements*/
+.breadcrumb a:after {
+	content: '';
+	position: absolute;
+	top: 0; 
+	right: -30px; /*half of square's length*/
+	/*same dimension as the line-height of .breadcrumb a */
+	width: 60px; 
+	height: 60px;
+	/*as you see the rotated square takes a larger height. which makes it tough to position it properly. So we are going to scale it down so that the diagonals become equal to the line-height of the link. We scale it to 70.7% because if square's: 
+	length = 1; diagonal = (1^2 + 1^2)^0.5 = 1.414 (pythagoras theorem)
+	if diagonal required = 1; length = 1/1.414 = 0.707*/
+	transform: scale(0.707) rotate(45deg);
+	/*we need to prevent the arrows from getting buried under the next link*/
+	z-index: 1;
+	/*background same as links but the gradient will be rotated to compensate with the transform applied*/
+	background: #666;
+	background: linear-gradient(135deg, #d5d5d5, #b4b4b4);
+	/*stylish arrow design using box shadow*/
+	box-shadow: 
+		2px -2px 0 2px rgba(0, 0, 0, 0.4), 
+		3px -3px 0 2px rgba(255, 255, 255, 0.1);
+	/*
+		5px - for rounded arrows and 
+		50px - to prevent hover glitches on the border created using shadows*/
+	border-radius: 0 5px 0 50px;
+}
+/*we dont need an arrow after the last link*/
+.breadcrumb a:last-child:after {
+	content: none;
+}
+/*we will use the :before element to show numbers*/
+.breadcrumb a:before {
+	content: counter(flag);
+	counter-increment: flag;
+	/*some styles now*/
+	border-radius: 100%;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	margin: 8px 0;
+	position: absolute;
+	top: 12px;
+	left: 38px;
+	background: #444;
+	background: linear-gradient(#444, #222);
+	font-weight: bold;
+        text-align: center;
+}
+
+
+.flat a, .flat a:after {
+	background: white;
+	color: black;
+	transition: all 0.5s;
+}
+.flat a:before {
+	background: white;
+	box-shadow: 0 0 0 1px #ccc;
+}
+.flat a:hover, .flat a.active, 
+.flat a:hover:after, .flat a.active:after{
+	background: #9EEB62;
+}
+
+.breadcrumb > .active {
+    color: #fff !important;
+}
+
+.row-reg-no-padding {
+    
+}
+
+.col-reg-no-padding {
+    padding-left:0px !important;
+    padding-right:0px !important;
+}
+
+#my_acc_details {
+    background-color: #c9d22a;
+    color: #fff;
+    height: 30px;
+    margin-top: -5px;
+     margin-bottom:10px;
+}
+
+#membership_bottom {
+    background-color: #c9d22a;
+    color: #fff;
+    height: 100%;
+    margin-top: -5px;
+}
+
+.reg-btn {
+    margin: 5px;
+}
+
+.reg-button-container {
+    margin-right: 5px;  
+}
+	
+#my_acc_details span {
+    font-size: 16px !important;
+    font-weight: 700;
+    margin-left: 10px;
+    margin-top: 4px;
+    position: absolute;
+}
+
+.bootstrap-select > .dropdown-toggle {
+    height: 24px !important;
+}
+
+.bootstrap-select.btn-group .dropdown-toggle .filter-option {
+
+    font-size: 12px !important;
+     margin-top: -3px !important;
+}
+
+div.form-group.form-group-membership span.error {
+    color: red;
+    font-size: 12px !important;
+    margin-left: 160px;
+}
+
+
+#already_have_a_acc {
+	
+    height: 30px;
+   
+}
+
+.bootstrap-select.btn-group .dropdown-menu {
+    
+    font-size: 12px !important;
+    top: 70% !important;
+     margin:0 !important;
+    padding:0 !important;
+   
+}
+
+#already_have_a_acc span {
+    font-size: 16px !important;
+    font-weight: 700;
+    margin-left: 10px;
+    margin-top: 4px;
+    position: absolute;
+}
+
+#already_have_a_acc a {
+    left: 28%;
+    position: absolute;
+    top: 5px;
+}
+
+
+
+div#my_acc_details span span {
+    font-size: 12px !important;
+    position: relative;
+    
+}
+
+.reg_left {
+    border: 1px solid #c0c0c0;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    padding: 15px;
+}
+        
+.form-control-membership {
+   
+    font-size: 12px !important;
+    height: 24px !important;
+    
+}
+
+.form-horizontal-membership .form-group-membership {
+    margin-left:0px !important;
+    margin-right:0px !important; 
+}
+.form-group-membership {
+    margin-bottom:0px !important;
+}
+
+.form-horizontal-membership .control-label-membership {
+    font-size: 12px;
+    padding-top: 0 !important;
+}
+
+
+label.checkbox-inline {
+  margin-bottom:15px !important;
+    
+}
+
+
+
+.sign_up_container h3 {
+    color: #c9d22a;
+    font-size: 18px;
+    font-weight: 700;
+    
+}
+
+.sign_up_container h4 {
+
+    font-size: 14px;
+    font-weight: 700;
+    
+}
+
+td.vcenter {
+    vertical-align: middle;
+    text-align:center;
+}
+
+table.table.table-striped tbody tr td div.checkbox {
+    vertical-align: middle;
+    text-align:center;
+}
+
+
+#membership_bottom div.row div.col-xs-12 div.pull-right.reg-button-container a.btn.btn-default.reg-btn {
+    color: #000 !important;
+}
+
+/* carousel indicators and controls */
+
+/* Removes the default 20px margin and creates some padding space for the indicators and controls */
+.carousel {
+    margin-bottom: 0;
+    /* padding: 0 40px 30px;*/
+    padding: 0 0 10px 5px;
+}
+.carousel-control {
+    left: -12px;
+}
+
+.carousel-control.left {
+    left: 14px;
+    top: 44%;
+    z-index: 100 !important;
+}
+.carousel-control.right {
+    right: 14px;
+    top: 44%;
+    z-index: 100 !important;
+}
+.carousel-indicators {
+    bottom: 0;
+    margin-right: 30px;
+   top: -35px;
+   list-style: outside none none;
+    margin-left: -30%;
+    position: absolute;
+    right: 0 !important;
+    text-align: center;
+  
+    
+ 
+}
+.carousel-indicators li {
+    background: none repeat scroll 0 0 #c0c0c0;
+}
+.carousel-indicators .active {
+    background: none repeat scroll 0 0 #333333;
+}
+
+.carousel-control {
+    background: none repeat scroll 0 0 #222222;
+    border: 3px solid #ffffff;
+    border-radius: 23px;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 100;
+    height: 40px;
+    left: 15px;
+    line-height: 30px;
+    margin-top: -20px;
+    opacity: 0.5;
+    position: absolute;
+    text-align: center;
+    top: 40%;
+    width: 40px;
+}
+
+#myCarousel.carousel.slide ol.carousel-indicators li {
+    width: 25px;
+    height: 25px;
+     background: none repeat scroll 0 0 #bdcd00;
+    border: 1px solid #ffffff;
+    text-indent: 0 !important;
+    border-radius: 0 !important;
+    margin-right: 3px;
+    
+}
+
+#myCarousel.carousel.slide ol.carousel-indicators li.active {
+      background: none repeat scroll 0 0 #5cb85c;
+}
+
+div#myCarousel {
+    margin-top: 45px;
+    margin-bottom: -10px;
+}
+
+.recipefinderH6Header {
+    color: #fff;
+    display: block;
+    font-family: verdana;
+    font-size: 12px;
+    font-weight: normal;
+    height: 25px;
+    left: 50px;
+    position: absolute;
+    top: 18px;
+}
+
+.recipefinderH6HeadermyBudget {
+    color: #2e6da4;
+    display: block;
+    font-family: verdana;
+    font-size: 12px;
+    font-weight: normal;
+    height: 25px;
+    left: 36px;
+    position: absolute;
+    top: 15px;
+}
+
+.recipefinderH6HeadermyMeal {
+    color: #fbba00;
+    display: block;
+    font-family: verdana;
+    font-size: 12px;
+    font-weight: normal;
+    height: 25px;
+    left: 36px;
+    position: relative;
+    top: 0;
+}
+
+.recipefinderH6HeadermyDiet {
+    color: #12bea2;
+    display: block;
+    font-family: verdana;
+    font-size: 12px;
+    font-weight: normal;
+    height: 25px;
+    left: 36px;
+    position: relative;
+    top: 0;
+}
+
+.recipefinderH6HeadermyTheme {
+    color: #9085ba;
+    display: block;
+    font-family: verdana;
+    font-size: 12px;
+    font-weight: normal;
+    height: 25px;
+    left: 36px;
+    position: relative;
+    top: 0;
+}
+
+.recipefinderH6HeadermyTypes {
+    color: #e75094;
+    display: block;
+    font-family: verdana;
+    font-size: 12px;
+    font-weight: normal;
+    height: 25px;
+    left: 36px;
+    position: relative;
+    top: 0;
+}
+
+
+
+
+
+
+/* carousel indicators and controls */
+
+
+.recipecarouselthumb { 
+width: 19% !important;
+}
+
+.recipecarouselthumbHome { 
+width: 30% !important;
+}
+
+.carousel-inner > .item {
+
+    margin-left: 20px !important;
+
+}
+
+
+div#myCarousel {
+    margin-top: 45px;
+    margin-bottom: -10px;
+}
+
+div#myBudget {
+   
+    margin-bottom: -10px;
+}
+
+#myBudget.carousel.slide ol.carousel-indicators li.active {
+background: none repeat scroll 0 0 #337ab7;
+ color:#fff;
+}
+
+
+#myBudget.carousel.slide ol.carousel-indicators li {
+    width: 25px;
+    height: 25px;
+     background: none repeat scroll 0 0 #fff;
+    border: 1px solid #ccc;
+    text-indent: 0 !important;
+    border-radius: 0 !important;
+    margin-right: 3px;
+    color:#337ab7;
+    
+}
+
+#myBudget.carousel.slide ol.carousel-indicators {
+    bottom: 0;
+    list-style: outside none none;
+    margin-left: -30%;
+    margin-right: 30px;
+    position: absolute;
+    right: 10px !important;
+    text-align: center;
+    top: 10px;
+}
+
+div#myBudget.carousel.slide div.carousel-inner div.item {
+    margin-top: 30px;  
+}
+
+#myBudget.carousel.slide div.carousel-inner a.left.carousel-control {
+     left: 11px;
+    top: 53%;
+    z-index: 100 !important;
+}
+
+#myBudget.carousel.slide div.carousel-inner a.right.carousel-control {
+     right: 24px;
+    top: 53%;
+    z-index: 100 !important;
+}
+
+div#myMeal {
+   
+    margin-bottom: -10px;
+    margin-top: -42px;
+}
+
+#myMeal.carousel.slide ol.carousel-indicators li.active {
+background: none repeat scroll 0 0 #fbba00;
+ color:#fff;
+}
+
+
+#myMeal.carousel.slide ol.carousel-indicators li {
+    width: 25px;
+    height: 25px;
+     background: none repeat scroll 0 0 #fff;
+    border: 1px solid #ccc;
+    text-indent: 0 !important;
+    border-radius: 0 !important;
+    margin-right: 3px;
+    color:#fbba00;
+    
+}
+
+#myMeal.carousel.slide ol.carousel-indicators {
+    bottom: 0;
+    list-style: outside none none;
+    margin-left: -30%;
+    margin-right: 30px;
+    position: absolute;
+    right: 10px !important;
+    text-align: center;
+    top: 10px;
+}
+
+div#myMeal.carousel.slide div.carousel-inner div.item {
+    margin-top: 30px;  
+}
+
+#myMeal.carousel.slide div.carousel-inner a.left.carousel-control {
+     left: 11px;
+    top: 53%;
+    z-index: 100 !important;
+}
+
+#myMeal.carousel.slide div.carousel-inner a.right.carousel-control  {
+    right: 24px;
+    top: 53%;
+    z-index: 100 !important;
+}
+
+
+div#myDiet {
+   
+    margin-bottom: -10px;
+    margin-top: -42px;
+}
+
+#myDiet.carousel.slide ol.carousel-indicators li.active {
+background: none repeat scroll 0 0 #12bea2;
+ color:#fff;
+}
+
+
+#myDiet.carousel.slide ol.carousel-indicators li {
+    width: 25px;
+    height: 25px;
+     background: none repeat scroll 0 0 #fff;
+    border: 1px solid #ccc;
+    text-indent: 0 !important;
+    border-radius: 0 !important;
+    margin-right: 3px;
+    color:#12bea2;
+    
+}
+
+#myDiet.carousel.slide ol.carousel-indicators {
+    bottom: 0;
+    list-style: outside none none;
+    margin-left: -30%;
+    margin-right: 30px;
+    position: absolute;
+    right: 10px !important;
+    text-align: center;
+    top: 10px;
+}
+
+div#myDiet.carousel.slide div.carousel-inner div.item {
+    margin-top: 30px;  
+}
+
+#myDiet.carousel.slide div.carousel-inner a.left.carousel-control {
+     left: 11px;
+    top: 53%;
+    z-index: 100 !important;
+}
+
+#myDiet.carousel.slide div.carousel-inner a.right.carousel-control  {
+    right: 24px;
+    top: 53%;
+    z-index: 100 !important;
+}
+
+div#myTheme {
+   
+    margin-bottom: -10px;
+    margin-top: -42px;
+}
+
+#myTheme.carousel.slide ol.carousel-indicators li.active {
+background: none repeat scroll 0 0 #9085ba;
+ color:#fff;
+}
+
+
+#myTheme.carousel.slide ol.carousel-indicators li {
+    width: 25px;
+    height: 25px;
+     background: none repeat scroll 0 0 #fff;
+    border: 1px solid #ccc;
+    text-indent: 0 !important;
+    border-radius: 0 !important;
+    margin-right: 3px;
+    color:#9085ba;
+    
+}
+
+#myTheme.carousel.slide ol.carousel-indicators {
+    bottom: 0;
+    list-style: outside none none;
+    margin-left: -30%;
+    margin-right: 30px;
+    position: absolute;
+    right: 10px !important;
+    text-align: center;
+    top: 10px;
+}
+
+div#myTheme.carousel.slide div.carousel-inner div.item {
+    margin-top: 30px;  
+}
+
+#myTheme.carousel.slide div.carousel-inner a.left.carousel-control {
+     left: 11px;
+    top: 53%;
+    z-index: 100 !important;
+}
+
+#myTheme.carousel.slide div.carousel-inner a.right.carousel-control  {
+    right: 24px;
+    top: 53%;
+    z-index: 100 !important;
+}
+
+div#myTypes {
+   
+    margin-bottom: -10px;
+    margin-top: -42px;
+}
+
+#myTypes.carousel.slide ol.carousel-indicators li.active {
+background: none repeat scroll 0 0 #e75094;
+ color:#fff;
+}
+
+
+#myTypes.carousel.slide ol.carousel-indicators li {
+    width: 25px;
+    height: 25px;
+     background: none repeat scroll 0 0 #fff;
+    border: 1px solid #ccc;
+    text-indent: 0 !important;
+    border-radius: 0 !important;
+    margin-right: 3px;
+    color:#e75094;
+    
+}
+
+#myTypes.carousel.slide ol.carousel-indicators {
+    bottom: 0;
+    list-style: outside none none;
+    margin-left: -30%;
+    margin-right: 30px;
+    position: absolute;
+    right: 10px !important;
+    text-align: center;
+    top: 10px;
+}
+
+div#myTypes.carousel.slide div.carousel-inner div.item {
+    margin-top: 30px;  
+}
+
+#myTypes.carousel.slide div.carousel-inner a.left.carousel-control {
+     left: 11px;
+    top: 53%;
+    z-index: 100 !important;
+}
+
+#myTypes.carousel.slide div.carousel-inner a.right.carousel-control  {
+    right: 24px;
+    top: 53%;
+    z-index: 100 !important;
+}
+
+ul li span.icons-nav-list {
+     display: block;
+}
+
+
+
+
+
+ul li span.icons-nav-list {     
+background:url('../img/navigation_sprite.png');
+}
+
+ul li#HomeIcon a {
+     border-bottom: 2px solid #999; 
+}
+
+ul li#HomeIcon a span.icons-nav-list {
+    background-position: 0 0;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    left: 35px;
+    top: 20px;
+}
+
+
+
+ul li#RecipeIcon a {
+     border-bottom: 2px solid #999; 
+}
+
+ul li#RecipeIcon a span.icons-nav-list {
+    background-position: 0 -110px;
+    height: 45px;
+    left: 35px;
+    position: absolute;
+    top: 120px;
+    width: 45px;
+}
+
+ul li#NaturalHealingIcon a {
+     border-bottom: 2px solid #999; 
+}
+
+ul li#NaturalHealingIcon a span.icons-nav-list {
+    background-position: 0 -220px;
+    height: 40px;
+    left: 25px;
+    position: absolute;
+    top: 225px;
+    width: 65px;
+}
+
+ul li#MealIcon a {
+     border-bottom: 2px solid #999; 
+}
+
+ul li#MealIcon a span.icons-nav-list {
+    background-position: 0 -330px;
+    height: 40px;
+    left: 40px;
+    position: absolute;
+    top: 325px;
+    width: 40px;
+}
+
+ul li#ShoppingListIcon a {
+     border-bottom: 2px solid #999; 
+}
+
+ul li#ShoppingListIcon a span.icons-nav-list {
+    background-position: 0 -440px;
+    height: 50px;
+    left: 40px;
+    position: absolute;
+    top: 415px;
+    width: 40px;
+}
+
+ul li#GuessIcon a {
+     border-bottom: 2px solid #999; 
+}
+
+ul li#BlogIcon a span.icons-nav-list {
+    background-position: 0 -570px;
+    height: 40px;
+    left: 30px;
+    position: absolute;
+    top: 625px;
+    width: 55px;
+}
+
+ul li#GuessIcon a span.icons-nav-list {
+    background-position: 0 -686px;
+    height: 50px;
+    left: 35px;
+    position: absolute;
+    top: 510px;
+    width: 55px;
+}
+
+
+/* then the classes for each button... */ 
+
+ul li#HomeIcon a span.icons-nav-list:hover {
+    background-position: 0px -55px;
+}
+
+ul li#HomeIcon a.active span.icons-nav-list {
+    background-position: 0px -55px;
+}
+
+
+ul li#RecipeIcon a span.icons-nav-list:hover {
+    background-position: 0px -165px;
+}
+
+ul li#RecipeIcon a.active span.icons-nav-list {
+    background-position: 0px -165px;
+}
+
+ul li#NaturalHealingIcon a span.icons-nav-list:hover {
+    background-position: 0px -275px;
+}
+
+ul li#NaturalHealingIcon a.active span.icons-nav-list {
+    background-position: 0px -275px;
+}
+
+ul li#MealIcon a span.icons-nav-list:hover {
+    background-position: 0px -385px;
+}
+
+ul li#MealIcon a.active span.icons-nav-list {
+    background-position: 0px -385px;
+}
+
+ul li#ShoppingListIcon a span.icons-nav-list:hover {
+    background-position: 0px -505px;
+}
+ul li#ShoppingListIcon a.active span.icons-nav-list {
+     background-position: 0px -505px;
+}
+
+ul li#BlogIcon a span.icons-nav-list:hover {
+    background-position: 0px -628px;
+}
+
+ul li#BlogIcon a.active span.icons-nav-list {
+     background-position: 0px -628px;
+}
+
+ul li#GuessIcon a span.icons-nav-list:hover {
+  background-position: 0px -744px;
+}
+
+ul li#GuessIcon a.active span.icons-nav-list {
+     background-position: 0px -744px;
+}
+
+
+
+
+.dropzone.smalltext::before, .dropzone.smalltext::after {
+    font-size: 15px !important;
+}
+
+#myRecipe.carousel.slide ol.carousel-indicators {
+    left: 200px;
+    top: 300px;
+}
+#myRecipe.carousel.slide div.carousel-inner {
+    left: -20px;
+    margin-top: 10px;
+}
+
+
+
+div#myHome {
+   
+    margin-bottom: -10px;
+    margin-top: -42px;
+}
+
+#myHome.carousel.slide ol.carousel-indicators li.active {
+background: none repeat scroll 0 0 #85d0f0 ;
+ color:#fff;
+}
+
+
+#myHome.carousel.slide ol.carousel-indicators li {
+    width: 25px;
+    height: 25px;
+     background: none repeat scroll 0 0 #fff;
+    border: 1px solid #ccc;
+    text-indent: 0 !important;
+    border-radius: 0 !important;
+    margin-right: 3px;
+    color:#85d0f0 ;
+    
+}
+
+#myHome.carousel.slide ol.carousel-indicators {
+    bottom: 0;
+    list-style: outside none none;
+    margin-left: -30%;
+    margin-right: 30px;
+    position: absolute;
+    right: 10px !important;
+    text-align: center;
+    top: 10px;
+}
+
+div#myHome.carousel.slide div.carousel-inner div.item {
+    margin-top: 30px;  
+}
+
+#myHome.carousel.slide div.carousel-inner a.left.carousel-control {
+     left: 11px;
+    top: 53%;
+    z-index: 100 !important;
+}
+
+#myHome.carousel.slide div.carousel-inner a.right.carousel-control  {
+    right: 24px;
+    top: 53%;
+    z-index: 100 !important;
+}
+
+.tabContainerInner a.left.carousel-control {left: 34px;
+    top: 50%;
+    z-index: 100 !important;}
+
+.tabContainerInner a.right.carousel-control { right: 20px;
+    top: 50%;
+    z-index: 100 !important;}
+
+

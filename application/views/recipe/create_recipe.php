@@ -11,6 +11,7 @@ echo form_open('recipe/create');?>
 
  <input type="input" name="title" />
   <input type="input" name="description" />
+  <input type="file" name="thumbnail" size="20" />
 
 <?php echo form_submit('', 'Create');
 

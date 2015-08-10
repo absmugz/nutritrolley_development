@@ -6,12 +6,22 @@ class Recipe extends CI_Controller {
 
     function __construct() {
         parent::__construct();
-        $this->load->model('recipe_model');
+        $this->load->model('recipes_model');
     }
 
     public function index() {
-        $data['recipes'] = $this->recipe_model->get_all();
-        $this->load->view('recipe/recipe', $data);
+       
+      //$user = $this->recipe_model->with('recipe_images')->get(1);
+      //$user = $this->recipe_model->with('recipe_images')->get_all();
+      //print_r($user);
+      //die();
+                 
+        $data['recipes'] = $this->recipes_model->get_all();
+        
+        $data['main_content'] = 'recipe/recipe';
+        
+        $this->load->view('includes/dashboard/template', $data);
+        
     }
 
     public function create() {
@@ -24,6 +34,8 @@ class Recipe extends CI_Controller {
         if ($this->form_validation->run() === FALSE) {
             $this->load->view('recipe/create_recipe');
         } else {
+            
+            
 
             $recipe = array(
                 'title' => $this->input->post('title'),
