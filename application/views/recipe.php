@@ -1,7 +1,20 @@
 <fieldset><legend>recipe</legend>
 <?php   
+
+var_dump($recipe_catergory);
+
 $attributes = array('class' => 'form-horizontal', 'id' => '');
 echo form_open_multipart('recipe_controller', $attributes); ?>
+    
+<select name="per1" id="per1">
+  <option selected="selected">Choose one</option>
+  <?php
+    foreach($recipe_catergory as $category) { ?>
+      <option value="<?= $category->recipe_category_id ?>"><?= $category->recipe_category_name ?></option>
+  <?php
+    } ?>
+</select> 
+    
 <div class="control-group">
     <label for="recipe" class="control-label">recipe <span class="required">*</span></label>
 	<div class='controls'>

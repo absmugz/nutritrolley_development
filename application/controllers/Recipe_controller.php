@@ -9,6 +9,10 @@ class Recipe_controller extends CI_Controller {
 		$this->load->helper('form');
 		$this->load->helper('url');
 		$this->load->model('recipe_model');
+                $this->load->model('Recipe_category_model');
+                
+                $this->load->model('Recipe_category_model', 'recipe_category');
+
 	}	
 	function index()
 	{			
@@ -70,6 +74,7 @@ class Recipe_controller extends CI_Controller {
 		{
                     
                     $data['main_content'] = 'recipe';
+                    $data['recipe_catergory'] = $this->recipe_category->get_all();
         $this->load->view('includes/dashboard/template', $data);
 			//$this->load->view('header');
 			//$this->load->view('recipe');
