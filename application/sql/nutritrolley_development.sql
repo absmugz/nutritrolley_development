@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 10, 2015 at 08:49 PM
+-- Generation Time: Aug 12, 2015 at 07:29 PM
 -- Server version: 5.6.11
 -- PHP Version: 5.5.3
 
@@ -56,6 +56,29 @@ CREATE TABLE IF NOT EXISTS `login_attempts` (
   `time` int(11) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `recipe_categories`
+--
+
+CREATE TABLE IF NOT EXISTS `recipe_categories` (
+  `recipe_category_id` int(11) NOT NULL AUTO_INCREMENT,
+  `recipe_category_name` varchar(100) NOT NULL,
+  PRIMARY KEY (`recipe_category_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+
+--
+-- Dumping data for table `recipe_categories`
+--
+
+INSERT INTO `recipe_categories` (`recipe_category_id`, `recipe_category_name`) VALUES
+(1, 'Budget'),
+(2, 'Meal'),
+(3, 'Diet'),
+(4, 'Theme'),
+(5, 'Cuisine');
 
 -- --------------------------------------------------------
 
@@ -123,7 +146,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
-(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1433697529, 1, 'Admin', 'istrator', 'ADMIN', '0'),
+(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1439399260, 1, 'Admin', 'istrator', 'ADMIN', '0'),
 (2, '::1', 'thisisatest', '$2y$08$YhkKg9U47sTbRtdbvr/Rkec.AvWUoLgkBHPZvUy4JEcyk4ZLmg0/m', NULL, 'thisisatest@gmail.com', NULL, NULL, NULL, NULL, 1439125405, NULL, 1, 'test', 'thisisatest', NULL, NULL);
 
 -- --------------------------------------------------------
@@ -170,6 +193,42 @@ CREATE TABLE IF NOT EXISTS `users_profile_picture` (
 
 INSERT INTO `users_profile_picture` (`id`, `profile_picture`, `user_id`) VALUES
 (1, 'Abs&Mah001.662fae.jpg', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_body`
+--
+
+CREATE TABLE IF NOT EXISTS `user_body` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `gender` varchar(100) NOT NULL,
+  `year_of_birth` date NOT NULL,
+  `current_weight` int(11) NOT NULL,
+  `height` int(11) NOT NULL,
+  `my_body_fat` int(11) NOT NULL,
+  `how_active_am_i` varchar(100) NOT NULL,
+  `activity_1` varchar(100) NOT NULL,
+  `activity_2` varchar(100) NOT NULL,
+  `activity_3` varchar(100) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_location`
+--
+
+CREATE TABLE IF NOT EXISTS `user_location` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `select_province` varchar(100) NOT NULL,
+  `city` varchar(100) NOT NULL,
+  `suburb` varchar(100) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 --
 -- Constraints for dumped tables
