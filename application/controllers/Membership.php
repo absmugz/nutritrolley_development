@@ -140,15 +140,15 @@ $this->thumbnailcrop->insert(array(
 
 //profile image crop ends here
 
-    var_dump($messages);
-    var_dump($user_id);die();
+    //var_dump($messages);
+    //var_dump($user_id);die();
     //var_dump($id);
 }
 else
 {
     $errors = $this->ion_auth->errors();
     //echo $errors;
-     var_dump($errors);die();
+     //var_dump($errors);die();
 }
 
 
