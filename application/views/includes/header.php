@@ -44,7 +44,7 @@
                                                     <li>
                                                         <div class="row">
                                                             <div class="col-md-12">
-                                                                <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                                                <form class="form" role="form" method="post" action="admin/login" accept-charset="UTF-8" id="login-nav">
                                                                     <div class="form-group">
                                                                         <label class="sr-only" for="exampleInputEmail2">Email address</label>
                                                                         <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
