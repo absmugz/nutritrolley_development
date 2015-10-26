@@ -44,14 +44,19 @@
                                                     <li>
                                                         <div class="row">
                                                             <div class="col-md-12">
-                                                                <form class="form" role="form" method="post" action="admin/login" accept-charset="UTF-8" id="login-nav">
+                                                                
+                                                                  <?php echo $this->session->flashdata('message');?>
+    <?php echo form_open('Members/login',array('class'=>'form','id'=>'login-nav'));?>
+
                                                                     <div class="form-group">
                                                                         <label class="sr-only" for="exampleInputEmail2">Email address</label>
-                                                                        <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+                                                                    
+                                                                        <input type="text" class="form-control" id="exampleInputEmail2" placeholder="Username" value="" name="identity" required>
                                                                     </div>
                                                                     <div class="form-group">
                                                                         <label class="sr-only" for="exampleInputPassword2">Password</label>
-                                                                        <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                                                                        <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password"name="password" required >
+                                                                       
                                                                     </div>
                                                                     <div class="checkbox">
                                                                         <label>
@@ -116,3 +121,13 @@
 	</div>
                     
                     <h6 id="breadcrumb_nutri" class="NutriTrolleyFont NutriTrolleyColor"><strong>You are here:</strong> NutriTrolley <strong><span id="breadcrumb"></span></strong></h6>
+                    
+                    
+                    
+<?php
+if($this->session->flashdata('sign_up_message'))
+{   
+    
+echo '<div class="alert alert-error"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>' . $this->session->flashdata('sign_up_message') . '</div>';  
+}
+?>  

@@ -27,10 +27,12 @@ class Public_Controller extends MY_Controller
   public function __construct() {
         parent::__construct();
 
+        $group = 'members';
+		
         // Check if the user is already logged in		
-        if(!$this->ion_auth->in_group('members')) {
+        if (!$this->ion_auth->in_group($group)) {
             // If not, we send him to the login Page
-             $this->session->set_flashdata('message','You are not allowed to visit the Groups page');
+             $this->session->set_flashdata('sign_up_message','You"re are not a allowed, register to view this page');
             redirect('Home', 'refresh');
         }
     }
