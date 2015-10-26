@@ -5,7 +5,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-class Recipefinder extends CI_Controller {
+class Recipefinder extends Public_Controller {
     
   function __construct() {
         parent::__construct();
