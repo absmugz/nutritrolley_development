@@ -29,11 +29,11 @@ class Members extends Public_Controller {
             if ($this->form_validation->run() === TRUE) {
                 $remember = (bool) $this->input->post('remember');
                 if ($this->ion_auth->login($this->input->post('identity'), $this->input->post('password'), $remember)) {
-                    
+                     $user = $this->ion_auth->user()->row();
+                     var_dump($user);die();
                     redirect('Home', 'refresh');
                 } else {
                     $this->session->set_flashdata('message', $this->ion_auth->errors());
-                    
                     redirect('Home', 'refresh');
                 }
             }

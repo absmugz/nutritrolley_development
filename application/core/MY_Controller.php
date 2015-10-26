@@ -19,7 +19,14 @@ class Admin_Controller extends MY_Controller
             // If not, we send him to the login Page
             redirect('admin', 'refresh');
         }
-    }
+         else {
+        //Store user in $data
+       //var_dump($this->ion_auth->logged_in());exit;
+       $this->ion_auth->logged_in();
+        }
+      
+   }
+    
 }
 
 class Public_Controller extends MY_Controller
@@ -34,6 +41,11 @@ class Public_Controller extends MY_Controller
             // If not, we send him to the login Page
              $this->session->set_flashdata('sign_up_message','You"re are not a allowed, register to view this page');
             redirect('Home', 'refresh');
+        }
+         else {
+        //Store user in $data
+        $this->ion_auth->logged_in();
+        //var_dump($this->ion_auth->logged_in());exit;
         }
     }
 }
