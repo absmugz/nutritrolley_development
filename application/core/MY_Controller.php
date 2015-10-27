@@ -46,8 +46,9 @@ class Public_Controller extends MY_Controller
       $data['loggedin'] = $loggedin;
        //Store user in $data
        $this->ion_auth->logged_in();
+       
       $this->load->view('Home', $data);
-        var_dump($this->ion_auth->logged_in());exit;
+        //var_dump($this->ion_auth->logged_in());exit;
     }
  
 

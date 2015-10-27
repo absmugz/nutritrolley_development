@@ -36,7 +36,8 @@
                             <div class="col-md-4 dashboard">
 <?php if ($loggedin): ?>
 
-                <p>Logged in</p>                
+                <p>Logged in</p>
+                
                                 <?php else: ?>  
                                  <div class="row">
                                     <div class="loginseparaterbarblue"></div>

@@ -26,7 +26,7 @@ class Members extends Public_Controller {
                 $remember = (bool) $this->input->post('remember');
                 if ($this->ion_auth->login($this->input->post('identity'), $this->input->post('password'), $remember)) {
                      $user = $this->ion_auth->user()->row();
-                     //ar_dump($user);
+                     var_dump($user);
                      var_dump($user);die();
                     redirect('Home', 'refresh');
                 } else {
