@@ -34,9 +34,11 @@
                             </div>
                             <!-- login -->
                             <div class="col-md-4 dashboard">
+<?php if ($loggedin): ?>
 
-
-                                <div class="row">
+                <p>Logged in</p>                
+                                <?php else: ?>  
+                                 <div class="row">
                                     <div class="loginseparaterbarblue"></div>
                                     <div class="loginseparaterbarwhite"></div>
                                     <div class="col-md-6 loginspc">
@@ -74,7 +76,7 @@
                                                 </ul></span> <span class="NutriTrolleyLogin loginbluetxt">or </span><span><a id="register" data-placement="bottom" data-toggle="tooltip" class="various fancybox.iframe" href="membership" data-original-title="Register">Register</a></span> <i class="icon-chevron-sign-right icon-2"></i></a></div>
                                     <div class="col-md-6 loginspc"><a id="why_register" class="various fancybox.iframe" title="" data-placement="bottom" data-toggle="tooltip" href="membership/why_register" data-original-title="Why Register?"><span class="NutriTrolleyLogin loginbluetxt">Why Register?</span></a> <i class="icon-chevron-sign-right icon-2"></i></div>
                                 </div>
-
+<?php endif; ?>
 
 
 

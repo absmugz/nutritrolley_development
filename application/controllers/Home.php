@@ -5,7 +5,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-class Home extends CI_Controller {
+class Home extends MY_Controller {
     
    function __construct() {
         parent::__construct();
@@ -27,6 +27,8 @@ class Home extends CI_Controller {
           "view6" => $this->load->view('guess_right_eat_right','', TRUE),
           "view7" => $this->load->view('blog','', TRUE)
  ); */
+        
+   
          $data['recipes'] = $this->recipes_model->get_all();
         $data['main_content'] = 'home';
         $this->load->view('includes/template', $data);
