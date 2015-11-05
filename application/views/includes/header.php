@@ -36,7 +36,8 @@
                             <div class="col-md-4 dashboard">
 <?php if ($loggedin): ?>
 
-                <p>Logged in</p>
+<?php echo 'Hi ' . $user->first_name; ?>
+<a href="<?=base_url();?>home/logout">Logout</a>
                 
                                 <?php else: ?>  
                                  <div class="row">
@@ -49,12 +50,12 @@
                                                             <div class="col-md-12">
                                                                 
                                                                   <?php echo $this->session->flashdata('message');?>
-    <?php echo form_open('Members/login',array('class'=>'form','id'=>'login-nav'));?>
+    <?php echo form_open('home/login',array('class'=>'form','id'=>'login-nav'));?>
 
                                                                     <div class="form-group">
-                                                                        <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                                                                        <label class="sr-only" for="exampleInputEmail2">Username</label>
                                                                     
-                                                                        <input type="text" class="form-control" id="exampleInputEmail2" placeholder="Username" value="" name="identity" required>
+                                                                        <input type="text" class="form-control" id="exampleInputEmail2" placeholder="Username" value="" name="username" required>
                                                                     </div>
                                                                     <div class="form-group">
                                                                         <label class="sr-only" for="exampleInputPassword2">Password</label>
