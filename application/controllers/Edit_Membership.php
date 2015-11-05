@@ -35,8 +35,7 @@ $user = $this->ion_auth->user()->row();
         $this->load->library('form_validation');
         $this->form_validation->set_rules('first_name', 'First name', 'trim');
         $this->form_validation->set_rules('last_name', 'Last name', 'trim');
-        $this->form_validation->set_rules('company', 'Company', 'trim');
-        $this->form_validation->set_rules('phone', 'Phone', 'trim');
+        
         //$this->thumbnailcrop->get(1);
 
         if ($this->form_validation->run() === FALSE) {
@@ -47,107 +46,45 @@ $user = $this->ion_auth->user()->row();
             $data['thumbnail'] = $thumbnail;
         $this->load->view('includes/membership/template', $data);
             
-        } else {
-            $data = array(
-                'first_name' => $this->input->post('first_name'),
-                'last_name' => $this->input->post('last_name'),
-                'company' => $this->input->post('company'),
-                'phone' => $this->input->post('phone')
-            );
-            if (strlen($this->input->post('password')) >= 6)
-                $new_data['password'] = $this->input->post('password');
-            $this->ion_auth->update($user->id, $data);
-
-
-            redirect('home', 'refresh');
-        }
+        } 
 
         
     }
 
 //in your form1 use form_open('author/submit_step1') to access the second function
     public function step_2() {
-        //load your model here and a method to save these items
-        //redirect to the same controller but the second method that loads the second form
+        
+        $user = $this->ion_auth->user()->row();
+        
+        $thumnailId = ($user->id);
+        $this->data['user'] = $user;
+        $thumbnail = $this->thumbnailcrop->get_by('user_id', $thumnailId);
    
-  /*
-  
-        $this->form_validation->set_rules('first_name', 'First name', 'required|max_length[255]');
-        //$this->form_validation->set_rules('surname', 'Surname', 'required|trim|max_length[255]');
-        //$this->form_validation->set_rules('username', 'Username', 'required|trim|max_length[255]');
-        //$this->form_validation->set_rules('password', 'Password', 'required|trim|max_length[255]');
-        
-        //$this->form_validation->set_rules('password_confirmation', 'Password confirmation', 'required|trim|max_length[255]');
-        
-        //$this->form_validation->set_rules('your_email', 'Your email', 'required|trim|valid_email|max_length[255]');
-
-        $this->form_validation->set_error_delimiters('<br /><span class="error">', '</span>');
-
-        if ($this->form_validation->run() == FALSE) { // validation hasn't been passed
-            $data['main_content'] = 'membership/step_1';
-            $this->load->view('includes/template', $data);
-        } else {
-      
 
             $data = array(
-                //'profile_picture' => @$this->profile_picture,
-                'first_name' => set_value('first_name'),
-                'surname' => set_value('surname'),
-                'username' => set_value('username'),
-                'password' => set_value('password'),
-                //'password_confirmation' => set_value('password_confirmation'),
-                'your_email' => set_value('your_email')
+                'first_name' => $this->input->post('first_name'),
+                'last_name' => $this->input->post('surname'),
+                'username' => $this->input->post('username'),
+                'email' => $this->input->post('your_email')
             );
-
-            $this->session->set_userdata($data);
-
             
-
-
-            //var_dump($this->session->all_userdata());
-            //loads the second form
-            $data['main_content'] = 'membership/step_2';
-            $this->load->view('includes/template', $data);
-        }
-       $data = array(
-                //'profile_picture' => @$this->profile_picture,
-                'first_name' => set_value('first_name'),
-                'surname' => set_value('surname'),
-                'username' => set_value('username'),
-                'password' => set_value('password'),
-                //'password_confirmation' => set_value('password_confirmation'),
-                'your_email' => set_value('your_email')
-            );
-
-            $this->session->set_userdata($data);
-*/
-        
-  $username = $this->input->post('username');
-$password = $this->input->post('password');
-$email = $this->input->post('your_email');
-		$additional_data = array(
-								'first_name' => $this->input->post('first_name'),
-								'last_name' => $this->input->post('surname'),
-								);
-$group = array('2'); // Sets user to admin. No need for array('1', '2') as user is always set to member by default
-
-//$this->ion_auth->register($username, $password, $email, $additional_data, $group);
-
-$id = $this->ion_auth->register($username, $password, $email, $additional_data, $group);
-
-if ($id)
-{
-    $messages = $this->ion_auth->messages();
-    $user = $this->ion_auth->user($id)->row();
+            
+            
+            if (strlen($this->input->post('password')) >= 6)
+                $new_data['password'] = $this->input->post('password');
+            $this->ion_auth->update($user->id, $data);
+            
+            
     
-    $user_id = $user->id;
+
                       
     //echo $messages;
     //var_dump($messages);die();
     //var_dump($user_id);die();
     
 //profile image crop code starts here
-        
+if (!empty($this->input->post('profile_pic_values'))) {
+    
 $error					= false;
 
 $absolutedir			= dirname(dirname(dirname(__FILE__)));
@@ -173,25 +110,17 @@ fclose($handle);
 $filename[]				= $fname;
 
 
-$this->load->model('User_profile_picture_model', 'thumbnailcrop');
 
-$this->thumbnailcrop->insert(array(
-    'profile_picture' => $fname,
-    'user_id' => $user_id
-));
+$this->thumbnailcrop->update_by(array('user_id'=>$thumnailId), array('profile_picture' => $fname));
 
+
+}
 //profile image crop ends here
 
     //var_dump($messages);
     //var_dump($user_id);die();
     //var_dump($id);
-}
-else
-{
-    $errors = $this->ion_auth->errors();
-    //echo $errors;
-     //var_dump($errors);die();
-}
+
 
 
 

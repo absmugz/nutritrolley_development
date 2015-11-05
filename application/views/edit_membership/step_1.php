@@ -1,4 +1,4 @@
-<?php echo form_open_multipart("membership/step_2", 'class="form-horizontal form-horizontal-membership"'); ?>
+<?php echo form_open_multipart("Edit_Membership/step_2", 'class="form-horizontal form-horizontal-membership"'); ?>
 <div class="container">
     <div class="row">
         <div class="col-xs-12">
@@ -54,7 +54,7 @@
 
                                     <label for="surname" class="col-xs-4 control-label control-label-membership">Surname <span class="required">*</span></label>
                                     <div class="col-xs-8">
-                                        <input id="surname" type="text" name="surname" maxlength="32" class="form-control form-control-membership" placeholder="Surname" value="<?php echo set_value('last_name', $user->last_name); ?>"  />
+                                        <input id="surname" type="text" name="surname" maxlength="32" class="form-control form-control-membership" placeholder="Surname" value="<?php echo set_value('surname', $user->last_name); ?>"  />
                                     </div>
 
                                 </div>
