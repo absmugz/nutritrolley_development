@@ -5,7 +5,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-class Blog extends CI_Controller {
+class Blog extends Public_Controller {
     
   function __construct()
   {
@@ -14,6 +14,16 @@ class Blog extends CI_Controller {
   }
 
     public function index() {
+        
+        if ($this->ion_auth->logged_in()) {
+            $loggedin = true;
+        } else {
+            $loggedin = false;
+        }
+
+        $data['user'] = $this->ion_auth->user()->row();
+        $data['loggedin'] = $loggedin;
+        
         $data['main_content'] = 'blog';
         $this->load->view('includes/template', $data);
     }

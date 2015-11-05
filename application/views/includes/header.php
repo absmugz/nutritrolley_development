@@ -9,6 +9,8 @@
         <link rel="stylesheet" href="<?php echo base_url("public/css/nutritrolley.css"); ?>">
         <link rel="stylesheet" href="<?php echo base_url("public/css/style.css"); ?>">
         
+         <link rel="stylesheet" href="<?php echo base_url("public/font-awesome/css/font-awesome.min.css"); ?>">
+        
           <link rel="stylesheet" href="<?php echo base_url("public/css/html5imageupload.css"); ?>" />
 
         <link rel="stylesheet" href="<?php echo base_url("public/fonts/font-awesome/css/font-awesome.css"); ?>">
@@ -35,9 +37,31 @@
                             <!-- login -->
                             <div class="col-md-4 dashboard">
 <?php if ($loggedin): ?>
+<div class="row">
+                                    <div class="loginseparaterbarblue"></div>
+                                    <div class="loginseparaterbarwhite"></div>
+                                    <div class="col-md-6"><span class="NutriTrolleyLogin whitetxt dropdown"> <a href="#" data-toggle="dropdown" class="dropdown-toggle"><?php echo 'Hi ' . $user->first_name; ?><i class="fa fa-user fa-fw"></i><i class="fa fa-caret-down"></i></a>
 
-<?php echo 'Hi ' . $user->first_name; ?>
-<a href="<?=base_url();?>home/logout">Logout</a>
+   
+ <ul class="dropdown-menu">
+
+            <li><a href="<?=base_url();?>home/profile"> <i class="fa fa-user fa-fw"></i> My Account</a></li>
+
+            <li><a href="<?=base_url();?>home/logout"><i class="fa icon-off fa-fw"></i> Logout</a></li>
+
+        </ul>
+       
+
+       
+
+    
+
+</span></div>
+                                    <div class="col-md-6 loginspc"><a href="<?=base_url();?>home/logout"><span class="NutriTrolleyLogin loginbluetxt">Logout </span><i class="fa icon-off fa-fw"></i></a></div>
+                                        
+</div>
+
+
                 
                                 <?php else: ?>  
                                  <div class="row">
