@@ -45,7 +45,7 @@
    
  <ul class="dropdown-menu">
 
-            <li><a href="<?=base_url();?>home/profile"> <i class="fa fa-user fa-fw"></i> My Account</a></li>
+            <li><a class="various fancybox.iframe" href="<?=base_url();?>membership"> <i class="fa fa-user fa-fw"></i> My Account</a></li>
 
             <li><a href="<?=base_url();?>home/logout"><i class="fa icon-off fa-fw"></i> Logout</a></li>
 
