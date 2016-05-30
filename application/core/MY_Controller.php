@@ -15,9 +15,12 @@ class Admin_Controller extends MY_Controller
         parent::__construct();
 
         // Check if the user is already logged in		
-        if (!$this->ion_auth->logged_in()) {
+        //if (!$this->ion_auth->logged_in()) {
+            
+            $group = 'admin';
+	if ($this->ion_auth->in_group($group)===FALSE){
             // If not, we send him to the login Page
-            redirect('admin', 'refresh');
+            redirect('Admin', 'refresh');
         }
          else {
         //Store user in $data

@@ -11,6 +11,7 @@ class Edit_Membership extends CI_Controller {
         $this->load->library('form_validation');
         $this->load->library('ion_auth');
         $this->load->model('User_profile_picture_model', 'thumbnailcrop');
+        
 
 // Load session library
 //$this->load->library('session');
@@ -25,6 +26,7 @@ class Edit_Membership extends CI_Controller {
 //var_dump($user);die();
         //print_r($user);
         //var_dump($user);die();
+        
         $thumnailId = ($user->id);
         $this->data['user'] = $user;
 
@@ -48,17 +50,17 @@ class Edit_Membership extends CI_Controller {
              if (!empty($thumbnail)) {
 //save image
 //var_dump($thumbnail);die();
-                $data['thumbnail'] = $thumbnail;
+                $profilePicExist = true;
             } else {
-//save default image
-                echo 'there is no image';
-                die();
+//save default image            
+                $profilePicExist = false;
             }
 
 
             //$this->load->view('admin/edit_profile', $this->data);
             $data['main_content'] = 'edit_membership/step_1';
             $data['user'] = $user;
+            $data['profilePicExist'] = $profilePicExist;
             $data['thumbnail'] = $thumbnail;
             $this->load->view('includes/membership/template', $data);
         }

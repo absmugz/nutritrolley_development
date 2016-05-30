@@ -34,9 +34,13 @@
                     <div class="col-xs-9 reg_left">
                         <div class="row">
                             <div class="col-xs-4">
-                              
+                              <?php if ($profilePicExist): ?>
                                    <div data-image="<?php echo base_url() . 'uploads/' . $thumbnail->profile_picture; ?>" class="dropzone" data-width="200" data-height="200" data-resize="true" data-ghost="false"  data-ajax="false" style="width: 100%;">
    <input id="profile_picture" type="file" name="profile_pic" />
+    <?php else: ?> 
+<div class="dropzone" data-width="200" data-height="200" data-resize="true" data-ghost="false"  data-ajax="false" style="width: 100%;">
+   <input id="profile_picture" type="file" name="profile_pic" />
+ <?php endif; ?>
 </div>
                             </div>
 

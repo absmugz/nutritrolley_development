@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | environments.
 |
 */
-$config['base_url'] = 'http://localhost:/nutritrolley_development/';
+$config['base_url'] = 'http://nutritrolley_development/';
 
 /*
 |--------------------------------------------------------------------------

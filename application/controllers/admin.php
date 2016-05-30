@@ -5,11 +5,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Admin extends MY_Controller {
 
     public function index() {
-        if (!$this->ion_auth->logged_in())
+       /* if (!$this->ion_auth->logged_in())
 		{
 			//$this->load->view('admin/login', $data);
                         $this->load->view('admin/login');
-		}
+		}*/
+                
+                $this->load->view('admin/login');
     }
 
     public function login() {
